@@ -49,6 +49,14 @@ export class TodoComponent extends Component<
 
   state: Readonly<TodoComponentState>;
 
+  // componentDidMount() {}
+  // componentDidUpdate() {
+  //   this.setState({
+  //     todo: this.props.todo,
+  //     newTodo: this.props.todo,
+  //   });
+  // }
+
   /**
    * Methods
    */
@@ -91,8 +99,8 @@ export class TodoComponent extends Component<
         <div>
           {!this.state.isUpdating ? (
             <React.Fragment>
-              <strong>{this.state.todo.title}</strong>
-              <p>{this.state.todo.description}</p>
+              <strong>{this.props.todo.title}</strong>
+              <p>{this.props.todo.description}</p>
             </React.Fragment>
           ) : (
             <React.Fragment>
